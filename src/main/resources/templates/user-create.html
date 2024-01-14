@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <title>Create user</title>
+
+</head>
+<body class="body">
+<div class="blockForm">
+    <form class="form" action="#" th:action="@{/user-create}" th:object="${user}" method="post">
+        <div class="lable">
+            <label for="firstName">First name</label>
+            <input type="text" th:field="*{firstName}" id="firstName" placeholder="First Name">
+        </div>
+        <div class="lable">
+            <label for="lastName">Last name</label>
+            <input type="text" th:field="*{lastName}" id="lastName" placeholder="Last Name">
+        </div>
+
+        <div><input class="input" type="submit" value="Create User"></div>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+*{
+    font-family: 'Lato', sans-serif;
+}
+.body{
+    background-color: #bad0ec;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.title {
+    color: #18365d;
+    text-align: center;
+
+}
+
+.heading {
+    color: #72acf6;
+    text-align: center;
+    margin-left: -57px
+}
+.table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.create{
+    text-align: center;
+    margin-left: -57px
+}
+.createA{
+    text-decoration: none;
+    font-size: larger;
+    color: #eeeab7;
+    background-color: #c28ddc;
+    padding: 5px;
+    border-radius: 30%;
+}
+.tr{
+    display: flex;
+    gap: 8px;
+    padding: 10px;
+    justify-content: flex-start;
+    margin-left: -49px;
+}
+
+.blockForm {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+
+.lable{
+    padding:10px;
+
+}
+.form{
+    background-color:#bad0ec;
+}
+.input{
+    margin-left: 87px;
+}
+.tableTr{
+    display: flex;
+    align-items: center;
+    margin-left: 42px;
+    gap: 10px;
+    justify-content: flex-start;
+}
+.lastName{
+    padding-left: 36px;
+}

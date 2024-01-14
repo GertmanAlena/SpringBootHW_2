@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <title>Users</title>
+
+</head>
+<body class="body">
+<div th:switch="${users}">
+    <h2 class="title" th:case="null">No users found!</h2>
+    <div th:case="*">
+        <h2 class="heading">Users</h2>
+        <table class="table">
+            <thead>
+            <tr class="tr">
+                <th class="namePol">Id</th>
+                <th class="namePol">First name</th>
+                <th class="namePol">Last name</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="tableTr" th:each="user : ${users}">
+                <td th:text="${user.id}"></td>
+                <td th:text="${user.firstName}"></td>
+                <td class="lastName" th:text="${user.lastName}"></td>
+                <td><a class="createA" th:href="@{user-update/{id}(id=${user.id})}">Edit</a></td>
+                <td><a class="createA" th:href="@{user-delete/{id}(id=${user.id})}">Delete</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <p class="create"><a class="createA" href="/user-create">Create user</a></p>
+</div>
+</body>
+</html>
